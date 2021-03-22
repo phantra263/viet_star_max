@@ -224,14 +224,6 @@ main {
             &:focus {
                 outline: none;
             }
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 0;
-                height: 100%;
-                width: 100%;
-            }
             .content-slick {
                 .text-decrip {
                     h1 {
@@ -326,15 +318,26 @@ main {
             margin-bottom: 20px;
             li {
                 color: #666;
-                padding: 0 12px;
+                padding: 5px 12px;
                 background: none ;
                 font-size: 14px ;
                 text-transform: uppercase;
                 display: inline-block;
                 cursor: pointer;
-                padding: 0 10px 0 5px;
-                margin: 0 5px 0 0;
                 font-weight: 700;
+                position: relative;
+                margin-right: 5px;
+            }
+            .active-order {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: red;
+                    bottom: 0;
+                    left: 0;
+                }
             }
         }
         .detail-product {
@@ -691,10 +694,6 @@ footer {
     main {
         .slick-banner {
             .slider-img {
-                &::after {
-                    background: #b8292f;
-                    opacity: 0.1;
-                }
                 .content-slick {
                     .text-decrip {
                         h1 {
@@ -705,6 +704,11 @@ footer {
                         }
                     }
                 }
+            }
+        }
+        .intro {
+            .intro-right {
+                min-height: 325px;
             }
         }
         .opinion-customer { 
@@ -721,5 +725,21 @@ footer {
     .contact-number {
         right: unset;
         left: 0;
+    }
+}
+@media screen and (max-width: 420px) { 
+    main {
+        .product-highlights {
+            .order {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 5px;
+                li {
+                    border: 1px solid #ddd;
+                    height: 50px;
+                    margin-right: 0;
+                }
+            }   
+        }
     }
 }
