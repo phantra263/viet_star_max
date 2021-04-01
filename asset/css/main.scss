@@ -32,7 +32,23 @@ li {
 .hide-sp {
     display: block;
 }
-
+h2.title-h2 {
+    margin: 0 0 50px 0;
+    padding: 0;
+    text-align: center;
+    &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        background: url('../img/line.png') no-repeat center;
+        top: 48px;
+        width: 10%;
+        left: 45%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+    }
+}
 .btn-registration {
     animation: ltr .5s linear 2s infinite alternate;
     border-color: #b8292f;
@@ -491,7 +507,7 @@ main {
         }
     }
     .intro-2 {
-        padding: 30px 0 0;
+        padding: 30px 0 ;
         background: #f5f5f5;
         h2 {
             font-size: 34px;
@@ -499,25 +515,32 @@ main {
             font-weight: bold;
         }
         p {
+            margin-bottom: 0;
             span {
                 font-weight: bolder;
             }
         }
-        .registration {
-            background: #b8292f;
-            padding: 55px;
-            p{
-                font-size: 16px;
-                color: #fff;
-            }
-            p:nth-child(1) {
-                text-transform: uppercase;
-                font-size: 31px;
-                margin-bottom: 0px;
-            }
+    }
+}
+footer {
+    font-size: 14px;
+    padding: 0;
+    background: #b8292f ;
+    color: #fff;
+    .banner-intro-2 {
+        width: 100%;
+    }
+    .registration {
+        background: #b8292f;
+        padding: 55px;
+        p{
+            font-size: 16px;
+            color: #fff;
         }
-        .banner-intro-2 {
-            width: 100%;
+        p:nth-child(1) {
+            text-transform: uppercase;
+            font-size: 31px;
+            margin-bottom: 0px;
         }
     }
     .contact {
@@ -566,13 +589,7 @@ main {
             }
         }
     }
-}
-footer {
-    font-size: 14px;
-    padding: 0;
-    background: #b8292f ;
-    color: #fff;
-    .container {
+    .copyright {
         padding: 30px 15px;
         border-top: 1px solid rgba(255, 255, 255, .1);
         p {

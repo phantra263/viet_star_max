@@ -73,5 +73,18 @@ $(document).ready(function(){
     }   
     removeHoverEvent(screen_1200) ;
     screen_1200.addListener(removeHoverEvent)
+
+    //background 10 declare
+//     const bg_img = $('.declare-vietstar');
+//     var iScrollHeight = bg_img.scrollTop();
+//   console.log($(window).height());
+//     $( window ).scroll(function() {
+//         var a = $(window).scrollTop();
+//         var b = a - $(window).height();
+//         console.log(a);
+//         // bg_img.css( "background-position", "'50% -" + 2 ' );
+//       });
  
+    $('.gallery a').lightbox();
+
   });
